@@ -20,7 +20,7 @@ controllers   控制器
 models        模型
 router        路由
 template      视图
-pibliuc       静态资源
+piblic       静态资源
 package.json  依赖配置
 app.js        启动
 ```

@@ -1,13 +1,15 @@
 const Router = require('koa-router');
 const router = new Router();
 const home = require('../controllers/home');
-
+const path = require('path');
 
 
 module.exports = (app) => {
 
 //首页
 router.get('/',home.index);
+
+
 //验证码
 router.get('/code.png',home.codes);
 
@@ -26,16 +28,31 @@ router.get('/code.png',home.codes);
 //     let codes = new Buffer(img,'base64');
 //     ctx.body = codes; 
 // });
+	 
+
+
+app.use(async(ctx, next) => {
+	  try {
+			await next()
+			const status = ctx.status || 404
+			if (status === 404) {
+				ctx.throw(404)
+			}
+	  } catch (err) {
+			ctx.status = err.status || 500
+			if (ctx.status === 404) {
+				  await ctx.render('common/404',{title:"404错误，找不到页面！"})
+				} else {
+				  await ctx.render('common/error')
+				}
+	  }
+})
 
 
 //加载路由中间件
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-app.use(async (ctx, next) => {
-        await ctx.render('404', {
-            title: '404'
-        })
-})
+
 
 }

@@ -5,7 +5,9 @@ module.exports = {
 
     //首页控制器
     async index(ctx, next) {
-          await ctx.render('index',{})
+          await ctx.render('home/index',{
+						title:"欢迎使用Kyomini框架！",
+					})
     },
     //验证码控制器
     async codes(ctx, next) {

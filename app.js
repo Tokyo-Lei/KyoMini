@@ -17,6 +17,7 @@ const Koa = require('koa'),
 			serve = require('koa-static'),
 			path = require('path'),
 			render = require('koa-art-template'),
+			bodyParser = require('koa-bodyparser'),
 			routers = require('./router'),
 			app = new Koa();
 
@@ -31,7 +32,7 @@ const Koa = require('koa'),
 	//加载路由
 	routers(app);
 
-
+  
 	//静态资源处理的中间件
 	app.use(serve(path.resolve(__dirname,'./public/')));	
 	
@@ -43,7 +44,9 @@ const Koa = require('koa'),
 				debug: process.env.NODE_ENV !== 'production'//调试模式
 	 });
 
- 
+	 
+	//获取POST/GET中间件
+    app.use(bodyParser());
 	 
 	 
 	//日志输出插件
@@ -51,5 +54,5 @@ const Koa = require('koa'),
 
 
 	app.listen(3000,function(){
-		console.log('good!欢迎使用KYOMINI框架！');
+		console.log('GOOD!^_^ 欢迎使用KYOMINI框架！');
 	});

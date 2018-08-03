@@ -34,5 +34,8 @@ koa-logger        日志模块
 koa-static        静态资源模块
 koa-art-template  模板模块
 koa-bodyparser    响应模块
+koa-koa-helmet    安全模块
 ```
 
+### Config配置
+web-config.js

@@ -18,6 +18,7 @@ const Koa = require('koa'),
 			path = require('path'),
 			render = require('koa-art-template'),
 			bodyParser = require('koa-bodyparser'),
+			helmet  =  require('koa-helmet'),
 			routers = require('./router'),
 			config = require('./config/web-config'),
 			app = new Koa();
@@ -26,9 +27,9 @@ const Koa = require('koa'),
 
 
 
-
-
-
+    //加载helmet安全模块 防止XSS攻击等
+    app.use(helmet());
+   
 
 	//加载路由
 	routers(app);
@@ -54,6 +55,6 @@ const Koa = require('koa'),
 	app.use(logger());
 
 
-	app.listen(8080,function(){
+	app.listen(config.port,function(){
 		console.log(config.web_info);
 	});

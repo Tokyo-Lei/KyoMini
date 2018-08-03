@@ -39,3 +39,8 @@ koa-koa-helmet    安全模块
 
 ### Config配置
 web-config.js
+```javascript
+template:'template',   模板目录
+extname:'.html',       模板后缀
+port : '8080',         服务端口
+```

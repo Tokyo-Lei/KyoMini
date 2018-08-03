@@ -29,10 +29,12 @@ body{
 }
 
 .content nav a{
-	width: 60px;
-	display: block;
-	text-align:left;
+	width: auto;
+	padding-right: 25px;
+	height: 30px;
+    display:block; 
 	float: left;
+	text-align:left;
 	color: #384048;
 	text-decoration: none;
 	font-family: "Microsoft YaHei" ;
@@ -45,7 +47,7 @@ body{
             width: 50px;
             background: #993300;
             position: absolute;
-       
+
             left: 0px;
             bottom: 0px;
             transition: all .5s;//设置过度时间为0.5秒，all是设置所有的过度属性，如果只想让width有过度效果，只需要transition: width .5s;

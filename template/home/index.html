@@ -2,14 +2,42 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{title}}</title>
 	<link rel="shortcut icon" href="./favicon.ico" /> 
 	<link rel="stylesheet" href="./home/css/home.css">
+    <link rel="stylesheet" href="./home/css/normalize.css">
 </head>
 <body>
 
 	<div class="content">
-		<h1> ：）欢迎使用KyoMini框架！</h1>
+		<h1> <span>:) </span>欢迎使用KyoMini框架！</h1>
+		<nav>
+			<a href="./">Home</a>
+			<a href="./about">About</a>
+			<a href="./list">List</a>
+			<a href="./picture">Picture</a>
+			<a href="./guest">Guest</a>
+			<div id="slidebar"></div>
+		</nav>
+		 
 	</div>
+
+	<script src="./js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("nav a").mouseover(function () {
+                var con = $(this).index();
+                $("#slidebar").css({
+                    left: 60 * con + "px"
+                });
+            });
+            $(".nav a").mouseleave(function () {
+                $("#slidebar").css({
+                    left: "0px"
+                })
+            })
+        })
+    </script>
 </body>
 </html>

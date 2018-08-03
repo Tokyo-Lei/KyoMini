@@ -1,3 +1,52 @@
 body{
-	background: #eeeee;
+	background: #eee;
+	padding:30px;
 }
+.content{
+	max-width: 1170px;
+	width: 95%;
+	height: auto;
+	background: #fff;
+	padding:30px;
+	-moz-box-shadow:1px 1px 1px #D4D4D4; 
+	-webkit-box-shadow:1px 1px 1px #D4D4D4; 
+	box-shadow:1px 1px 1px #D4D4D4;
+}
+.content h1{
+	 font-family: "Microsoft YaHei" ;
+}
+.content span{
+    display: block;
+    font-size: 2em;
+    margin: 0px 0px 20px 0px;
+}
+
+.content nav {
+	margin: 20px 0 0 0;
+	border-top: 1px solid #eee;
+	padding: 20px 0 0 0;
+	position: relative;
+}
+
+.content nav a{
+	width: 60px;
+	display: block;
+	text-align:left;
+	float: left;
+	color: #384048;
+	text-decoration: none;
+	font-family: "Microsoft YaHei" ;
+	font-size: 16px;
+
+}
+
+#slidebar {
+            height: 2px;
+            width: 50px;
+            background: #993300;
+            position: absolute;
+       
+            left: 0px;
+            bottom: 0px;
+            transition: all .5s;//设置过度时间为0.5秒，all是设置所有的过度属性，如果只想让width有过度效果，只需要transition: width .5s;
+        }

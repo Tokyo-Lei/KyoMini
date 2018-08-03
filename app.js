@@ -19,6 +19,7 @@ const Koa = require('koa'),
 			render = require('koa-art-template'),
 			bodyParser = require('koa-bodyparser'),
 			routers = require('./router'),
+			config = require('./config/web-config'),
 			app = new Koa();
 
 
@@ -53,6 +54,6 @@ const Koa = require('koa'),
 	app.use(logger());
 
 
-	app.listen(3000,function(){
-		console.log('GOOD!^_^ 欢迎使用KYOMINI框架！');
+	app.listen(8080,function(){
+		console.log(config.web_info);
 	});

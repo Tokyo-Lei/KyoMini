@@ -40,7 +40,6 @@ body{
 	text-align:left;
 	color: #384048;
 	text-decoration: none;
-	font-family: "Microsoft YaHei" ;
 	font-size: 16px;
 	text-align: center;
 
@@ -53,6 +52,12 @@ body{
     left: 0px;
     bottom: 0px;
     transition: all .5s;
+}
+/*图片自适应*/
+.content .img-responsive {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
 }
 
 .content hr {

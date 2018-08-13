@@ -7,11 +7,7 @@
 此框架是Node.js上最简单的入门级框架，初学者轻易上手进行二次开发。
 当然！它是免费的。
 
-### 安装
-
-第一步: 输入  `npm install  `   进行安装依赖包
-
-第二步: 输入  `node app.js`   启动就是这么简单！
+第二步: 输入  `npm start`   启动就是这么简单！
 
 ### 文件架构
 
@@ -19,10 +15,15 @@
 controllers   控制器
 models        模型
 router        路由
-template      视图
-piblic       静态资源
+template      视图模板
+piblic        静态资源
+  |-home      前台模板静态资源 
+  |-admin     后台模板静态资源
+  |-css       css公共静态资源
+  |-js        js 公共静态资源
+  |-img       img公共静态资源
 package.json  依赖配置
-app.js        启动
+app.js        启动程序
 ```
 
 ### 相关模块
@@ -34,7 +35,7 @@ koa-logger        日志模块
 koa-static        静态资源模块
 koa-art-template  模板模块
 koa-bodyparser    响应模块
-koa-koa-helmet    安全模块
+koa-helmet    安全模块
 ```
 
 ### Config配置

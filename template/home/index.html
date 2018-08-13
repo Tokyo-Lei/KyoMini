@@ -9,7 +9,7 @@
         <main>
 
         	<article >
-        		<img src="./home/img/banner.jpg">
+        		<img src="./home/img/banner.jpg" class="img-responsive">
         		<h2>帮助您快速创建Web应用框架</h2>
         		<p>此框架基于 Node.js + Koa + Art-Template + Mongoose 基础开发,是目前世界上最前沿最新框架</p>
         		<hr>
@@ -19,7 +19,7 @@
 
 第一步: 输入  `npm install  `   进行安装依赖包
 
-第二步: 输入  `node app.js`   启动就是这么简单！
+第二步: 输入  `npm start`   启动就是这么简单！
 
 ### 文件架构
 
@@ -27,10 +27,15 @@
 controllers   控制器
 models        模型
 router        路由
-template      视图
-piblic       静态资源
+template      视图模板
+piblic        静态资源
+  |-home      前台模板静态资源 
+  |-admin     后台模板静态资源
+  |-css       css公共静态资源
+  |-js        js 公共静态资源
+  |-img       img公共静态资源
 package.json  依赖配置
-app.js        启动
+app.js        启动程序
 ```
 
 ### 相关模块
@@ -42,7 +47,7 @@ koa-logger        日志模块
 koa-static        静态资源模块
 koa-art-template  模板模块
 koa-bodyparser    响应模块
-koa-koa-helmet    安全模块
+koa-helmet    安全模块
 ```
 
 ### Config配置
@@ -60,7 +65,7 @@ port : '8080',         服务端口
 
         </main>
     <hr>
-	<div class="copyright">©2018 www.naokiono.cc. All rights reserved.	</p> 
+	<div class="copyright">©2018 www.naokiono.cc. All rights reserved.	</div> 
 	</div>
 
     {{include './layout/footer.html'}}

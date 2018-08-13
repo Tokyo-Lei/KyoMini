@@ -22,16 +22,17 @@ body{
 }
 
 .content nav {
+	height: 40px;
 	margin: 20px 0 0 0;
 	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 	padding: 20px 0 0 0;
 	position: relative;
 }
 
 .content nav a{
-	width: auto;
-	padding-right: 25px;
-	height: 30px;
+	width: 70px;
+	height: 20px;
     display:block; 
 	float: left;
 	text-align:left;
@@ -39,16 +40,15 @@ body{
 	text-decoration: none;
 	font-family: "Microsoft YaHei" ;
 	font-size: 16px;
+	text-align: center;
 
 }
 
-#slidebar {
-            height: 2px;
-            width: 50px;
-            background: #993300;
-            position: absolute;
-
-            left: 0px;
-            bottom: 0px;
-            transition: all .5s;//设置过度时间为0.5秒，all是设置所有的过度属性，如果只想让width有过度效果，只需要transition: width .5s;
-        }
+.content #slidebar {
+    height: 2px;
+    background: #993300;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transition: all .5s;
+}

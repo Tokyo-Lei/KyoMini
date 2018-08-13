@@ -41,9 +41,9 @@ const Koa = require('koa'),
 
 
 	render(app, {
-				root: path.join(__dirname, 'template'),//模板所在文件夹目录
-				extname: '.html',//模板文件后缀名
-				debug: process.env.NODE_ENV !== 'production'//调试模式
+				root: path.join(__dirname, config.template), //模板所在文件夹目录
+				extname: config.extname,   //模板文件后缀名
+				debug: config.debug //调试模式
 	 });
 
 	 
@@ -53,7 +53,6 @@ const Koa = require('koa'),
 	 
 	//日志输出插件
 	app.use(logger());
-    console.log(config.port);
 
 	app.listen(config.port,function(){
 		console.log(config.web_info);

@@ -2,20 +2,63 @@
 	{{include './layout/head.html'}}
 
 	<div class="content">
-		<h1> <span>:) </span>欢迎使用KyoMini框架！</h1>
-		<nav>
-			<a href="./">Home</a>
-			<a href="./about">About</a>
-			<a href="./list">List</a>
-			<a href="./picture">Picture</a>
-			<a href="./guest">Guest</a>
-			<div id="slidebar"></div>
-		</nav>
-         
+		
+
+		{{include './layout/menu.html'}}
+
         <main>
 
-        	<article>
-        		<p>基于Node.js + Koa2 + Art-Template基础开发</p>
+        	<article >
+        		<img src="./home/img/banner.jpg">
+        		<h2>帮助您快速创建Web应用框架</h2>
+        		<p>此框架基于 Node.js + Koa + Art-Template + Mongoose 基础开发,是目前世界上最前沿最新框架</p>
+        		<hr>
+                <div id="Content" class="markdown-body">
+                	
+
+
+### 安装
+
+第一步: 输入  `npm install  `   进行安装依赖包
+
+第二步: 输入  `node app.js`   启动就是这么简单！
+
+### 文件架构
+
+```javascript
+controllers   控制器
+models        模型
+router        路由
+template      视图
+piblic       静态资源
+package.json  依赖配置
+app.js        启动
+```
+
+### 相关模块
+
+```javascript
+Koa               框架模块
+koa-router        路由模块
+koa-logger        日志模块
+koa-static        静态资源模块
+koa-art-template  模板模块
+koa-bodyparser    响应模块
+koa-koa-helmet    安全模块
+```
+
+### Config配置
+web-config.js
+```javascript
+template:'template',   模板目录
+extname:'.html',       模板后缀
+port : '8080',         服务端口
+```
+
+
+                </div>
+
+
         	</article>
 
         </main>

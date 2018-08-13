@@ -62,3 +62,8 @@ body{
     border-bottom: none;
     margin: 30px 0;
 }
+.content .copyright{
+
+	font-size: 14px;
+	color: #a1a1a1;
+}

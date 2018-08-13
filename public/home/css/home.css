@@ -1,6 +1,7 @@
 body{
 	background: #eee;
 	padding:30px;
+	font-family: "Microsoft YaHei" ;
 }
 .content{
 	max-width: 1170px;
@@ -12,8 +13,9 @@ body{
 	-webkit-box-shadow:1px 1px 1px #D4D4D4; 
 	box-shadow:1px 1px 1px #D4D4D4;
 }
-.content h1{
-	 font-family: "Microsoft YaHei" ;
+
+.content h2{
+	font-weight: normal;
 }
 .content span{
     display: block;
@@ -23,7 +25,7 @@ body{
 
 .content nav {
 	height: 40px;
-	margin: 20px 0 0 0;
+	margin: 20px 0 40px 0;
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 	padding: 20px 0 0 0;

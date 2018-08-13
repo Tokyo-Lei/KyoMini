@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{{title}}</title>
-	<link rel="shortcut icon" href="./favicon.ico" /> 
-	<link rel="stylesheet" href="./home/css/home.css">
-    <link rel="stylesheet" href="./home/css/normalize.css">
-</head>
-<body>
+
+	{{include './layout/head.html'}}
 
 	<div class="content">
 		<h1> <span>:) </span>欢迎使用KyoMini框架！</h1>
@@ -20,22 +11,17 @@
 			<a href="./guest">Guest</a>
 			<div id="slidebar"></div>
 		</nav>
+         
+        <main>
+
+        	<article>
+        		<p>基于Node.js + Koa2 + Art-Template基础开发</p>
+        	</article>
+
+        </main>
+
 		 
 	</div>
 
-	<script src="./js/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("nav a").mouseover(function () {
-                var con = $(this).index();
-                var width = $(this).width();
-                $("#slidebar").css({
-                    left: 70 * con + "px",
-                    width: width + "px"
-                });
-            });
-           
-        })
-    </script>
-</body>
-</html>
+    {{include './layout/footer.html'}}
+

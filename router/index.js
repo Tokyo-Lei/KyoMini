@@ -31,7 +31,7 @@ router.get('/code.png',home.codes);
 	 
 
 
-app.use(async(ctx, next) => {
+app.use( async (ctx, next) => {
 	  try {
 			await next()
 			const status = ctx.status || 404
@@ -43,7 +43,7 @@ app.use(async(ctx, next) => {
 			if (ctx.status === 404) {
 				  await ctx.render('common/404',{title:"404错误，找不到页面！"})
 				} else {
-				  await ctx.render('common/error')
+				  await ctx.render('common/error',{err:error})
 				}
 	  }
 })

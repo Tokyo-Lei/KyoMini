@@ -53,7 +53,7 @@ const Koa = require('koa'),
 	 
 	//日志输出插件
 	app.use(logger());
-
+    console.log(config.port);
 
 	app.listen(config.port,function(){
 		console.log(config.web_info);

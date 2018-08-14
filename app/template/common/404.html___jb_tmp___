@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{{title}}</title>
+	<style>
+	body{font-family: "Microsoft YaHei"}
+	div{margin: 40px 0 0 30px;}
+    h2,h3{color: #22272c;padding-left: 20px;}
+	h3 a,h3 a:hover{color: #22272c;text-decoration:none;}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="/img/404.png" >
+		<h2>您访问的页面不存在！</h2>
+		<h3><a href=""> > BLANK</a></h3>
+	</div>	
+</body>
+</html>

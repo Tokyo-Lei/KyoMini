@@ -16,18 +16,20 @@
 ### 文件架构
 
 ```javascript
-controllers   控制器
-models        模型
-router        路由
-template      视图模板
-piblic        静态资源
-  |-home      前台模板静态资源 
-  |-admin     后台模板静态资源
-  |-css       css公共静态资源
-  |-js        js 公共静态资源
-  |-img       img公共静态资源
-package.json  依赖配置
-app.js        启动程序
+app
+|  |-controllers   控制器
+|  |-models        模型
+|  |-router        路由
+|  |-template      视图模板
+|  app.js          启动程序
+piblic             静态资源
+|   |-home          前台模板静态资源
+|   |-admin         后台模板静态资源
+|   |-css           css公共静态资源
+|   |-js            js 公共静态资源
+|   |-img           img公共静态资源
+package.json       依赖配置
+
 ```
 
 ### 相关模块

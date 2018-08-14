@@ -1,13 +1,13 @@
 {
-  "name": "all",
+  "name": "kyomini For Node.js",
   "version": "1.0.0",
-  "description": "",
+  "description": "node.js+koa+mongose+template",
   "main": "app.js",
   "scripts": {
     "start": "node ./app/app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["node.js","koa","kyomini","aet-template","mongoose"],
+  "author": "NaokiOno",
   "license": "ISC",
   "dependencies": {
     "art-template": "^4.12.2",

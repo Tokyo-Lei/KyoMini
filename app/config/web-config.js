@@ -1,5 +1,4 @@
 module.exports = {
-
     template:'template',
     extname:'.html',
     mongodb_url:'mongodb://localhost:27017/kyomini',

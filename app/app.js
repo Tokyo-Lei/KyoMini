@@ -20,6 +20,7 @@ const Koa = require('koa'),
 			helmet  =  require('koa-helmet'),
 			routers = require('./router'),
 			config = require('./config/web-config'),
+            mongoose = require('mongoose'),
 			app = new Koa();
 
 
@@ -47,7 +48,7 @@ const Koa = require('koa'),
 	//加载路由
 	routers(app);
 	//静态资源处理的中间件
-	app.use(serve(path.resolve(__dirname,'./public/')));
+	app.use(serve(path.resolve(__dirname,'../public/')));
 	render(app, {
 				root: path.join(__dirname, config.template), //模板所在文件夹目录
 				extname: config.extname,   //模板文件后缀名

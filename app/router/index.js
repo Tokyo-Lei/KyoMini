@@ -7,11 +7,17 @@ const path = require('path');
 module.exports = (app) => {
 
 //首页
-router.get('/',home.index);
+router.get('/', home.index);
+//About
+router.get('/about', home.about);
+
+
+
+
 
 
 //验证码
-router.get('/code.png',home.codes);
+// router.get('/code.png',home.codes);
 
 //验证码参数配置
 // router.get('/captcha.png', (ctx, next) => {

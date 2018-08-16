@@ -4,7 +4,7 @@
   "description": "node.js+koa+mongose+template",
   "main": "app.js",
   "scripts": {
-    "start": "node ./app/app.js"
+    "start": "node ./app/server.js"
   },
   "keywords": [
     "node.js",
@@ -26,7 +26,6 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "moment": "^2.22.2",
-    "mongoose": "^5.2.6",
-    "mongose": "0.0.2-security"
+    "mongoose": "^5.2.6"
   }
 }

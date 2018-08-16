@@ -20,7 +20,7 @@ const Koa = require('koa'),
 			helmet  =  require('koa-helmet'),
 			routers = require('./router'),
 			config = require('./config/web-config'),
-            mongoose = require('mongoose'),
+      mongoose = require('mongoose'),
 			app = new Koa();
 
 
@@ -43,8 +43,8 @@ const Koa = require('koa'),
 
 
 
-    //加载helmet安全模块 防止XSS攻击等
-    app.use(helmet());
+  //加载helmet安全模块 防止XSS攻击等
+  app.use(helmet());
 	//加载路由
 	routers(app);
 	//静态资源处理的中间件
@@ -58,6 +58,7 @@ const Koa = require('koa'),
     app.use(bodyParser());
 	//日志输出插件
 	app.use(logger());
+	//端口相应
 	app.listen(config.port,function(){
 		console.log(config.web_info);
 	});

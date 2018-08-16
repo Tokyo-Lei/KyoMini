@@ -1,26 +1,27 @@
 
+<div class="copyright">{{web["copyright"]}}	</div>
+</div>
 
 	<script src="./js/jquery.min.js"></script>
-    <script src="./js/showdown.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("nav a").mouseover(function () {
-                var con = $(this).index();
-                var width = $(this).width();
-                $("#slidebar").css({
-                    left: 70 * con + "px",
-                    width: width + "px"
-                });
-            });
+  <script src="./js/showdown.min.js"></script>
+  <script>
+      $(document).ready(function () {
+          $("nav a").mouseover(function () {
+              var con = $(this).index();
+              var width = $(this).width();
+              $("#slidebar").css({
+                  left: 70 * con + "px",
+                  width: width + "px"
+              });
+          });
 
+      let converter = new showdown.Converter();
+      let content = document.getElementById("Content").innerHTML;
+      let new_content = converter.makeHtml(content);
+      $("#Content").html(new_content);
 
-        let converter = new showdown.Converter();
-        let content = document.getElementById("Content").innerHTML;
-        let new_content = converter.makeHtml(content);
-        $("#Content").html(new_content);
-           
-        })
+      })
 
-    </script>
+  </script>
 </body>
 </html>

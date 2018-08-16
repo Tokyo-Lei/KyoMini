@@ -1,19 +1,22 @@
 
 const webModel = require('../../models/webModel');
+const pageModel = require('../../models/pageModel');
 
 module.exports = {
 
    //首页
    async index(ctx){
       const web_db = await webModel.findOne({});
-      if(!web_db) return ctx.error('没有数据！');
-      await ctx.render('home/index',{web:web_db});
+      const page_db = await pageModel.find({url:'home'});
+      await ctx.render('home/index',{
+        web:web_db,
+        page:page_db
+      });
    },
 
    //About
    async about(ctx){
       const web_db = await webModel.findOne({});
-      if(!web_db) return ctx.error('没有数据！');
       await ctx.render('home/about',{web:web_db});
    }
 

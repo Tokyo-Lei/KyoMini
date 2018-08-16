@@ -36,22 +36,22 @@ router.get('/about', home.about);
 
 
 
-// app.use( async (ctx, next) => {
-// 	  try {
-// 			await next()
-// 			const status = ctx.status || 404
-// 			if (status === 404) {
-// 				ctx.throw(404)
-// 			}
-// 	  } catch (err) {
-// 			ctx.status = err.status || 500
-// 			if (ctx.status === 404) {
-// 				  await ctx.render('common/404',{title:"404错误，找不到页面！"})
-// 				} else {
-// 				  await ctx.render('common/error',{err:error})
-// 				}
-// 	  }
-// })
+app.use( async (ctx, next) => {
+	  try {
+			await next()
+			const status = ctx.status || 404
+			if (status === 404) {
+				ctx.throw(404)
+			}
+	  } catch (err) {
+			ctx.status = err.status || 500
+			if (ctx.status === 404) {
+				  await ctx.render('common/404',{title:"404错误，找不到页面！"})
+				} else {
+				  await ctx.render('common/error',{error:err})
+				}
+	  }
+})
 
 
 
